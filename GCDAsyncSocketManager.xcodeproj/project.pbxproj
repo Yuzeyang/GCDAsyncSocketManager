@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B552B441C4B4EF4000744E1 /* GCDAsyncSocketManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5B552B431C4B4EF4000744E1 /* GCDAsyncSocketManager.h */; };
+		5B552B461C4B4EF4000744E1 /* GCDAsyncSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B552B451C4B4EF4000744E1 /* GCDAsyncSocketManager.m */; };
+		5D86A5941A516B94FA88E4B4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F794918406C32DCEB584FC6 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5B552B3E1C4B4EF4000744E1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				5B552B441C4B4EF4000744E1 /* GCDAsyncSocketManager.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2F794918406C32DCEB584FC6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5503A00BD4B995F7E48CDAC9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5B552B401C4B4EF4000744E1 /* libGCDAsyncSocketManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCDAsyncSocketManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B552B431C4B4EF4000744E1 /* GCDAsyncSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocketManager.h; sourceTree = "<group>"; };
+		5B552B451C4B4EF4000744E1 /* GCDAsyncSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocketManager.m; sourceTree = "<group>"; };
+		5B552B4C1C4B51FC000744E1 /* GCDAsyncSocketConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocketConfig.h; sourceTree = "<group>"; };
+		9EAF4440355BEA4963C31076 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B552B3D1C4B4EF4000744E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D86A5941A516B94FA88E4B4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		442E1724F80C84135011F4DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F794918406C32DCEB584FC6 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B552B371C4B4EF4000744E1 = {
+			isa = PBXGroup;
+			children = (
+				5B552B421C4B4EF4000744E1 /* GCDAsyncSocketManager */,
+				5B552B411C4B4EF4000744E1 /* Products */,
+				CF0D5DC9B3FC672CCA41631A /* Pods */,
+				442E1724F80C84135011F4DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B552B411C4B4EF4000744E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B552B401C4B4EF4000744E1 /* libGCDAsyncSocketManager.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B552B421C4B4EF4000744E1 /* GCDAsyncSocketManager */ = {
+			isa = PBXGroup;
+			children = (
+				5B552B431C4B4EF4000744E1 /* GCDAsyncSocketManager.h */,
+				5B552B451C4B4EF4000744E1 /* GCDAsyncSocketManager.m */,
+				5B552B4C1C4B51FC000744E1 /* GCDAsyncSocketConfig.h */,
+			);
+			path = GCDAsyncSocketManager;
+			sourceTree = "<group>";
+		};
+		CF0D5DC9B3FC672CCA41631A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5503A00BD4B995F7E48CDAC9 /* Pods.debug.xcconfig */,
+				9EAF4440355BEA4963C31076 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B552B3F1C4B4EF4000744E1 /* GCDAsyncSocketManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B552B491C4B4EF4000744E1 /* Build configuration list for PBXNativeTarget "GCDAsyncSocketManager" */;
+			buildPhases = (
+				9E3D22529D0E70503B25A0B7 /* Check Pods Manifest.lock */,
+				5B552B3C1C4B4EF4000744E1 /* Sources */,
+				5B552B3D1C4B4EF4000744E1 /* Frameworks */,
+				5B552B3E1C4B4EF4000744E1 /* CopyFiles */,
+				D3CF2108F5F68F349849712C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCDAsyncSocketManager;
+			productName = GCDAsyncSocketManager;
+			productReference = 5B552B401C4B4EF4000744E1 /* libGCDAsyncSocketManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B552B381C4B4EF4000744E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "宫城";
+				TargetAttributes = {
+					5B552B3F1C4B4EF4000744E1 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 5B552B3B1C4B4EF4000744E1 /* Build configuration list for PBXProject "GCDAsyncSocketManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5B552B371C4B4EF4000744E1;
+			productRefGroup = 5B552B411C4B4EF4000744E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B552B3F1C4B4EF4000744E1 /* GCDAsyncSocketManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E3D22529D0E70503B25A0B7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3CF2108F5F68F349849712C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B552B3C1C4B4EF4000744E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B552B461C4B4EF4000744E1 /* GCDAsyncSocketManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5B552B471C4B4EF4000744E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5B552B481C4B4EF4000744E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B552B4A1C4B4EF4000744E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5503A00BD4B995F7E48CDAC9 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5B552B4B1C4B4EF4000744E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EAF4440355BEA4963C31076 /* Pods.release.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B552B3B1C4B4EF4000744E1 /* Build configuration list for PBXProject "GCDAsyncSocketManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B552B471C4B4EF4000744E1 /* Debug */,
+				5B552B481C4B4EF4000744E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B552B491C4B4EF4000744E1 /* Build configuration list for PBXNativeTarget "GCDAsyncSocketManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B552B4A1C4B4EF4000744E1 /* Debug */,
+				5B552B4B1C4B4EF4000744E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B552B381C4B4EF4000744E1 /* Project object */;
+}
