@@ -50,3 +50,8 @@ for example:
     }];
 ```
 
+## Related articles
+
+[iOS 基于GCDAsyncSocket快速开发Socket通信](http://zeeyang.com/2016/01/17/GCDAsyncSocket-socket/)
+
+[iOS Socket重构设计](http://zeeyang.com/2016/06/22/GCDAsyncSocket-socket-optimize/)
