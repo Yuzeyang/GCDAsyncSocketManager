@@ -18,23 +18,23 @@ socket connect:
 ```
 2. you can connect to the custom environment
 
-   ```objective-c
-   - (GACConnectConfig *)connectConfig {
-       if (!_connectConfig) {
-           _connectConfig = [[GACConnectConfig alloc] init];
-           _connectConfig.channels = kDefaultChannel;
-           _connectConfig.currentChannel = kDefaultChannel;
-           _connectConfig.host = @"online socket address";
-           _connectConfig.port = 7070;
-           _connectConfig.socketVersion = 5;
-       }
-       _connectConfig.token = @"f14c4e6f6c89335ca5909031d1a6efa9";
-       
-       return _connectConfig;
-   }
+```objective-c
+- (GACConnectConfig *)connectConfig {
+    if (!_connectConfig) {
+        _connectConfig = [[GACConnectConfig alloc] init];
+        _connectConfig.channels = kDefaultChannel;
+        _connectConfig.currentChannel = kDefaultChannel;
+        _connectConfig.host = @"online socket address";
+        _connectConfig.port = 7070;
+        _connectConfig.socketVersion = 5;
+    }
+    _connectConfig.token = @"f14c4e6f6c89335ca5909031d1a6efa9";
+    
+    return _connectConfig;
+}
 
-    [[GCDAsyncSocketCommunicationManager sharedInstance] createSocketWithConfig:self.connectConfig];
-   ```
+ [[GCDAsyncSocketCommunicationManager sharedInstance] createSocketWithConfig:self.connectConfig];
+```
 
 socket disconnect:
 
