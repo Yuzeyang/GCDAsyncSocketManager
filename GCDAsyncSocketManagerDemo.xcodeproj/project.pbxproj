@@ -18,6 +18,7 @@
 		5B4DFFDD1D1BBB1B00D6E43F /* GCDAsyncSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFFD81D1BBB1B00D6E43F /* GCDAsyncSocketManager.m */; };
 		5B4DFFE01D1BBB3700D6E43F /* GACErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFFDF1D1BBB3700D6E43F /* GACErrorManager.m */; };
 		5B4DFFE31D1BBBE900D6E43F /* GACSocketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B4DFFE21D1BBBE900D6E43F /* GACSocketModel.m */; };
+		5BB24E4F1E03D3060046EB64 /* GACConnectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB24E4E1E03D3060046EB64 /* GACConnectConfig.m */; };
 		7CCD75F4CCDDF06423730DFB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0E9C3674A3D3BDC0847CDF1 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +34,6 @@
 		5B4DFFAC1D1BB59100D6E43F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B4DFFAF1D1BB59100D6E43F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B4DFFB11D1BB59100D6E43F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B4DFFD01D1BBB1B00D6E43F /* GCDAsyncSocketConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocketConfig.h; sourceTree = "<group>"; };
 		5B4DFFD21D1BBB1B00D6E43F /* GCKeyChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCKeyChainManager.h; sourceTree = "<group>"; };
 		5B4DFFD31D1BBB1B00D6E43F /* GCKeyChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCKeyChainManager.m; sourceTree = "<group>"; };
 		5B4DFFD51D1BBB1B00D6E43F /* GCDAsyncSocketCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocketCommunicationManager.h; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		5B4DFFDF1D1BBB3700D6E43F /* GACErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GACErrorManager.m; sourceTree = "<group>"; };
 		5B4DFFE11D1BBBE900D6E43F /* GACSocketModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GACSocketModel.h; sourceTree = "<group>"; };
 		5B4DFFE21D1BBBE900D6E43F /* GACSocketModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GACSocketModel.m; sourceTree = "<group>"; };
+		5BB24E4D1E03D3060046EB64 /* GACConnectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GACConnectConfig.h; sourceTree = "<group>"; };
+		5BB24E4E1E03D3060046EB64 /* GACConnectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GACConnectConfig.m; sourceTree = "<group>"; };
 		B0E9C3674A3D3BDC0847CDF1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9D9DD7B828B1868F4B0ABD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +128,6 @@
 		5B4DFFCF1D1BBB1B00D6E43F /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				5B4DFFD01D1BBB1B00D6E43F /* GCDAsyncSocketConfig.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -156,6 +157,8 @@
 			children = (
 				5B4DFFE11D1BBBE900D6E43F /* GACSocketModel.h */,
 				5B4DFFE21D1BBBE900D6E43F /* GACSocketModel.m */,
+				5BB24E4D1E03D3060046EB64 /* GACConnectConfig.h */,
+				5BB24E4E1E03D3060046EB64 /* GACConnectConfig.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				5B4DFFDC1D1BBB1B00D6E43F /* GCDAsyncSocketCommunicationManager.m in Sources */,
 				5B4DFFA51D1BB59100D6E43F /* AppDelegate.m in Sources */,
 				5B4DFFA21D1BB59100D6E43F /* main.m in Sources */,
+				5BB24E4F1E03D3060046EB64 /* GACConnectConfig.m in Sources */,
 				5B4DFFDD1D1BBB1B00D6E43F /* GCDAsyncSocketManager.m in Sources */,
 				5B4DFFE01D1BBB3700D6E43F /* GACErrorManager.m in Sources */,
 				5B4DFFDB1D1BBB1B00D6E43F /* GCKeyChainManager.m in Sources */,

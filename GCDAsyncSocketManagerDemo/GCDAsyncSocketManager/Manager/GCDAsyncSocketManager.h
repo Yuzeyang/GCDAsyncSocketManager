@@ -63,4 +63,9 @@
  */
 - (void)resetBeatCount;
 
+/**
+ *  设置连接的host和port
+ */
+- (void)changeHost:(nullable NSString *)host port:(NSInteger)port;
+
 @end

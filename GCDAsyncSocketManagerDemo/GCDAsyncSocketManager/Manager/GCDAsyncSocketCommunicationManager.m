@@ -10,12 +10,16 @@
 #import "GCDAsyncSocketCommunicationManager.h"
 #import "GCDAsyncSocket.h"
 #import "GCKeyChainManager.h"
-#import "GCDAsyncSocketConfig.h"
 #import "GCDAsyncSocketManager.h"
 #import "GACSocketModel.h"
 #import <UIKit/UIKit.h>
 #import "AFNetworkReachabilityManager.h"
 #import "GACErrorManager.h"
+
+/**
+ *  默认通信协议版本号
+ */
+static NSUInteger PROTOCOL_VERSION = 7;
 
 @interface GCDAsyncSocketCommunicationManager () <GCDAsyncSocketDelegate>
 
@@ -23,6 +27,7 @@
 @property (nonatomic, strong) NSMutableDictionary *requestsMap;
 @property (nonatomic, strong) GCDAsyncSocketManager *socketManager;
 @property (nonatomic, assign) NSTimeInterval interval;  //服务器与本地时间的差值
+@property (nonatomic, strong, nonnull) GACConnectConfig *connectConfig;
 
 @end
 
@@ -55,6 +60,20 @@
 
 #pragma mark - socket actions
 
+- (void)createSocketWithConfig:(nonnull GACConnectConfig *)config {
+    if (!config.token.length || !config.channels.length || !config.host.length) {
+        return;
+    }
+    
+    self.connectConfig = config;
+    self.socketAuthAppraisalChannel = config.channels;
+    [GCKeyChainManager sharedInstance].token = config.token;
+    [self.socketManager changeHost:config.host port:config.port];
+    PROTOCOL_VERSION = config.socketVersion;
+    
+    [self.socketManager connectSocketWithDelegate:self];
+}
+
 - (void)createSocketWithToken:(nonnull NSString *)token channel:(nonnull NSString *)channel {
     if (!token || !channel) {
         return;
@@ -62,6 +81,7 @@
 
     self.socketAuthAppraisalChannel = channel;
     [GCKeyChainManager sharedInstance].token = token;
+    [self.socketManager changeHost:@"online socket address" port:7070];
 
     [self.socketManager connectSocketWithDelegate:self];
 }

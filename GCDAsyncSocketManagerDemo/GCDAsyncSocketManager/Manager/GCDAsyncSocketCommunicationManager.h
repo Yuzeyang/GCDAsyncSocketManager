@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GACConnectConfig.h"
 
 /**
  *  业务类型
@@ -14,7 +15,7 @@
 typedef NS_ENUM(NSInteger, GACRequestType) {
     GACRequestType_Beat = 1,                       //心跳
     GACRequestType_GetConversationsList,           //获取会话列表
-    GACRequestType_ConnectionAuthAppraisal,        //连接鉴权
+    GACRequestType_ConnectionAuthAppraisal = 7,        //连接鉴权
 };
 
 /**
@@ -68,6 +69,17 @@ typedef void (^SocketDidReadBlock)(NSError *__nullable error, id __nullable data
  *  @return 单例对象
  */
 + (nullable GCDAsyncSocketCommunicationManager *)sharedInstance;
+
+/**
+ 初始化 socket
+ 
+ @param token         token
+ @param channel       建连时通道
+ @param host          主机地址
+ @param port          端口号
+ @param socketVersion socket通信协议版本号
+ */
+- (void)createSocketWithConfig:(nonnull GACConnectConfig *)config;
 
 /**
  *  初始化 socket

@@ -8,8 +8,13 @@
 
 #import "ViewController.h"
 #import "GCDAsyncSocketCommunicationManager.h"
+#import "GACConnectConfig.h"
+
+#define kDefaultChannel @"dkf"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) GACConnectConfig *connectConfig;
 
 @end
 
@@ -23,7 +28,25 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [[GCDAsyncSocketCommunicationManager sharedInstance] createSocketWithToken:@"your token" channel:@"your communication channel"];
+    // 1. 使用默认的连接环境
+    [[GCDAsyncSocketCommunicationManager sharedInstance] createSocketWithToken:@"f14c4e6f6c89335ca5909031d1a6efa9" channel:kDefaultChannel];
+    
+    // 2.自定义配置连接环境
+    [[GCDAsyncSocketCommunicationManager sharedInstance] createSocketWithConfig:self.connectConfig];
+}
+
+- (GACConnectConfig *)connectConfig {
+    if (!_connectConfig) {
+        _connectConfig = [[GACConnectConfig alloc] init];
+        _connectConfig.channels = kDefaultChannel;
+        _connectConfig.currentChannel = kDefaultChannel;
+        _connectConfig.host = @"online socket address";
+        _connectConfig.port = 7070;
+        _connectConfig.socketVersion = 5;
+    }
+    _connectConfig.token = @"f14c4e6f6c89335ca5909031d1a6efa9";
+    
+    return _connectConfig;
 }
 
 - (void)didReceiveMemoryWarning {

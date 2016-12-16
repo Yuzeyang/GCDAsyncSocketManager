@@ -8,7 +8,9 @@
 
 #import "GCDAsyncSocketManager.h"
 #import "GCDAsyncSocket.h"
-#import "GCDAsyncSocketConfig.h"
+
+static const NSInteger TIMEOUT = 30;
+static const NSInteger kBeatLimit = 3;
 
 @interface GCDAsyncSocketManager ()
 
@@ -16,6 +18,8 @@
 @property (nonatomic, assign) NSInteger beatCount;      // 发送心跳次数，用于重连
 @property (nonatomic, strong) NSTimer *beatTimer;       // 心跳定时器
 @property (nonatomic, strong) NSTimer *reconnectTimer;  // 重连定时器
+@property (nonatomic, strong) NSString *host;           // Socket连接的host地址
+@property (nonatomic, assign) uint16_t port;            // Sokcet连接的port
 
 @end
 
@@ -42,6 +46,11 @@
 }
 
 #pragma mark - socket actions
+- (void)changeHost:(NSString *)host port:(NSInteger)port {
+    self.host = host;
+    self.port = port;
+}
+
 - (void)connectSocketWithDelegate:(id)delegate {
     if (self.connectStatus != -1) {
         NSLog(@"Socket Connect: YES");
@@ -54,7 +63,7 @@
     [[GCDAsyncSocket alloc] initWithDelegate:delegate delegateQueue:dispatch_get_main_queue()];
     
     NSError *error = nil;
-    if (![self.socket connectToHost:HOST onPort:PORT withTimeout:TIMEOUT error:&error]) {
+    if (![self.socket connectToHost:self.host onPort:self.port withTimeout:TIMEOUT error:&error]) {
         self.connectStatus = -1;
         NSLog(@"connect error: --- %@", error);
     }
@@ -132,7 +141,7 @@
 
 - (void)reconnection:(NSTimer *)timer {
     NSError *error = nil;
-    if (![self.socket connectToHost:HOST onPort:PORT withTimeout:TIMEOUT error:&error]) {
+    if (![self.socket connectToHost:self.host onPort:self.port withTimeout:TIMEOUT error:&error]) {
         self.connectStatus = -1;
     }
 }
