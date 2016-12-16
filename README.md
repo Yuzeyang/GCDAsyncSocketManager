@@ -11,11 +11,31 @@ GCDAsyncSocketManager提供快速使用GCDAsyncSocket来搭建socket，它包含
 ## How to use
 socket connect:
 
-you can connect when app enter forground or ViewController view will appear
+1. you can connect to the default environment when app enter forground or ViewController view will appear 
 
 ```objective-c
 [[GCDAsyncSocketCommunicationManager sharedInstance] createSocketWithToken:@"your token" channel:@"your communication channel"];
 ```
+2. you can connect to the custom environment
+
+   ```objective-c
+   - (GACConnectConfig *)connectConfig {
+       if (!_connectConfig) {
+           _connectConfig = [[GACConnectConfig alloc] init];
+           _connectConfig.channels = kDefaultChannel;
+           _connectConfig.currentChannel = kDefaultChannel;
+           _connectConfig.host = @"online socket address";
+           _connectConfig.port = 7070;
+           _connectConfig.socketVersion = 5;
+       }
+       _connectConfig.token = @"f14c4e6f6c89335ca5909031d1a6efa9";
+       
+       return _connectConfig;
+   }
+
+    [[GCDAsyncSocketCommunicationManager sharedInstance] createSocketWithConfig:self.connectConfig];
+   ```
+
 socket disconnect:
 
 you can disconnect when app enter background
